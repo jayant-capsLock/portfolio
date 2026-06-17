@@ -89,3 +89,88 @@ flex-wrap:wrap;
 padding:10px 16px;
 border:1px solid #00ffff;
 }
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:1rem;
+}
+
+.skill-card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(0,255,255,.15);
+border-radius:16px;
+padding:1.25rem;
+backdrop-filter:blur(12px);
+transition:.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-5px);
+border-color:#00ffff;
+box-shadow:0 0 30px rgba(0,255,255,.15);
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:1rem;
+}
+
+.skill-card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(0,255,255,.15);
+border-radius:16px;
+padding:1.25rem;
+backdrop-filter:blur(12px);
+transition:.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-5px);
+border-color:#00ffff;
+box-shadow:0 0 30px rgba(0,255,255,.15);
+}
+
+.project{
+position:relative;
+overflow:hidden;
+}
+
+.project::before{
+content:"";
+position:absolute;
+inset:-1px;
+
+background:linear-gradient(
+90deg,
+#00ffff,
+#ff00ff,
+#00ffff
+);
+
+background-size:300% 300%;
+
+animation:borderMove 6s linear infinite;
+
+z-index:-1;
+}
+
+@keyframes borderMove{
+0%{background-position:0% 50%;}
+100%{background-position:300% 50%;}
+}
+
+section{
+position:relative;
+}
+
+.card{
+background:rgba(255,255,255,.025);
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 40px rgba(0,0,0,.35),
+0 0 40px rgba(0,255,255,.05);
+}
